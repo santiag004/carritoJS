@@ -18,5 +18,8 @@
 
 // ● Eliminar producto del carrito
 
-let productos = ['Remera', 'Anteojos', 'Gorra', 'Short', 'Zapatillas'];
-console.log("Los producots que puede elegir son: " + productos);
+let productos = ['Remera', 'Anteojos', 'Gorra', 'Short', 'Zapatillas', 'Jean'];
+console.log("Los productos que puede elegir son: " );
+for (let i =0 ; i<productos.length; i++){
+    console.log("Numero " + i +     ": " + productos[i]);
+}
