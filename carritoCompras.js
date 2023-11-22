@@ -1,3 +1,9 @@
+let productos = ['Remera', 'Anteojos', 'Gorra', 'Short', 'Zapatillas', 'Jean'];
+console.log("Los productos que puede elegir son: " );
+for (let i =0 ; i<productos.length; i++){
+    console.log("Numero " + i +     ": " + productos[i]);
+}
+
 let carritoCompras = ["Elemento1", "Elemento2", "Elemento3"]
 
 const agregarElemento = (array, elemento) => {
