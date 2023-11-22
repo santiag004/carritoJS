@@ -4,3 +4,15 @@ const agregarElemento = (array, elemento) => {
     array.push(elemento)
     console.log("El elemento " + elemento + " se ha agregado al carrito")
 }
+
+
+let array = [2, 3, 4, 5, 60]
+
+const listarProductos = (array) =>{
+    for(let i = 0; i < array.length; i++){
+        console.log(array[i])
+    }
+}
+
+listarProductos(array)
+
