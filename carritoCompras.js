@@ -1,15 +1,12 @@
 let productos = ['Remera', 'Anteojos', 'Gorra', 'Short', 'Zapatillas', 'Jean'];
-console.log("Los productos que puede elegir son: " );
-for (let i =0 ; i<productos.length; i++){
-    console.log("Numero " + i +     ": " + productos[i]);
-}
 
-let carritoCompras = ["Elemento1", "Elemento2", "Elemento3"]
+let elemento = "Campera"
 
 const agregarElemento = (array, elemento) => {
     array.push(elemento)
     console.log("El elemento " + elemento + " se ha agregado al carrito")
 }
+agregarElemento(productos, elemento)
 
 let array = [2, 3, 4, 5, 60]
 
@@ -18,18 +15,19 @@ const listarProductos = (array) =>{
         console.log(array[i])
     }
 }
-
-listarProductos(array)
+listarProductos(productos)
 
 // Función para buscar un producto en el carrito
 
-function buscarProducto(consulta) {
-    return carrito.find(producto => producto.includes(consulta));   
+function buscarProducto(array, consulta) {
+    return console.log(array.find(array => array.includes(consulta)));   
   }
 
+buscarProducto(productos, "Remera")
 
 // Función para filtrar productos en el carrito
 
-function filtrarProductos(consulta) {
-    return carrito.filter(producto => producto.includes(consulta));
+function filtrarProductos(array, consulta) {
+    return console.log(array.filter(producto => producto.includes(consulta)));
   }
+filtrarProductos(productos, elemento)
