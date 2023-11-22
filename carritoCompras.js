@@ -1,47 +1,52 @@
-let carritoCompras = ["Elemento1", "Elemento2", "Elemento3"]
+let productos = ['Remera', 'Anteojos', 'Gorra', 'Short', 'Zapatillas', 'Jean'];
+console.log("Los productos que puede elegir son: " );
+ 
 
-const agregarElemento = (array, elemento) => {
-    array.push(elemento)
+let elemento = "Campera"
+const agregarElemento = (productos, elemento) => {
+    productos.push(elemento)
     console.log("El elemento " + elemento + " se ha agregado al carrito")
 }
+agregarElemento (productos, elemento);
 
+ 
 
-let array = [2, 3, 4, 5, 60]
-
-const listarProductos = (array) =>{
-    for(let i = 0; i < array.length; i++){
-        console.log(array[i])
+const listarProductos = (productos) =>{
+    for(let i = 0; i < productos.length; i++){
+        console.log(productos[i])
     }
 }
 
-listarProductos(array)
+listarProductos(productos);
 // Función para buscar un producto en el carrito
 
-function buscarProducto(consulta) {
-    return carrito.find(producto => producto.includes(consulta));   
+function buscarProducto(elemento) {
+    return productos.find(productos => productos.includes(elemento));   
   }
 
+  buscarProducto(elemento)
 
 // Función para filtrar productos en el carrito
 
+
 function filtrarProductos(consulta) {
-    return carrito.filter(producto => producto.includes(consulta));
+    return productos.filter(elemento => elemento.includes(consulta));
   }
 
-const productosCarrito = document.querySelectorAll('.producto-carrito');
+  function eliminarElemento(productos, elemento) {
 
-productosCarrito.forEach(producto => {
-    producto.addEventListener('click', eliminarProducto);
-  });
+    const indice = productos.indexOf(elemento);
+  
+    if (indice !== -1) {
+  
+        productos.splice(indice, 1);
+  
+    }
+ 
+   actualizarCarrito(); 
 
-  function eliminarProducto(event) {
-    const productoId = event.target.dataset.id;
-    const indice = carrito.findIndex(producto => producto.id === productoId);
-        if (indice !== -1) {
-      carrito.splice(indice, 1);
-    } actualizarCarrito()
-}
+  }
 
 function actualizarCarrito(){
-    console.log (carrito)
+    console.log (productos)
 }
